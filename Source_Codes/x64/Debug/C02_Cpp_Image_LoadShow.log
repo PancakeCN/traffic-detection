@@ -1,0 +1,7 @@
+﻿  C07_Segmentation_Video.cpp
+E:\Common_things\数字视频图像处理与通信\实验\C07_Segmentation_Video_V14\Source_Codes\C07_Segmentation_Video.cpp(205,94): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+E:\Common_things\数字视频图像处理与通信\实验\C07_Segmentation_Video_V14\Source_Codes\C07_Segmentation_Video.cpp(228,94): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+E:\Common_things\数字视频图像处理与通信\实验\C07_Segmentation_Video_V14\Source_Codes\C07_Segmentation_Video.cpp(241,53): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+E:\Common_things\数字视频图像处理与通信\实验\C07_Segmentation_Video_V14\Source_Codes\C07_Segmentation_Video.cpp(253,94): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+E:\Common_things\数字视频图像处理与通信\实验\C07_Segmentation_Video_V14\Source_Codes\C07_Segmentation_Video.cpp(275,67): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+  C02_Cpp_Image_LoadShow.vcxproj -> E:\Common_things\数字视频图像处理与通信\实验\C07_Segmentation_Video_V14\x64\Debug\C07_Segmentation_Video.exe
