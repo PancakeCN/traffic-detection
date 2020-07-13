@@ -1,33 +1,3 @@
-/**************************************************************************************
-【第七章】视频运动目标分割：样本工程使用vs2015(社区版) + opencv 4.2.0
-【1】注意程序中的条件编译开关，用于控制那些代码段起作用。
-【2】如果在编译中出现error C4996，需要在“vs主菜单菜单->项目->xxx属性->C/C++->预处理器->预处理器定义”中增加个“_CRT_SECURE_NO_WARNINGS”
-【3】这个工程作为OPENCV工程样本，在课程资源中提供，使用方法如下：
-		1）将这个工程文件解压到一个文件夹中，文件夹改名为Sample21(举例)；
-		2）重命名工程名为Sample21；
-		3）从课件中复制一个C++例程，替换这个程序中的main结构体；
-		4）在VS2015界面主菜单上，选择project->C02_Cpp_Image_LoadShow Properties->C/C++->General->Additional Include Directories
-								编辑该窗口，增加“D:\opencv420x64v14\build\include;”，其中D:\opencv420x64v14路径是opencv-4.2.0-vc14_vc15.exe运行后的存储路径
-		5）在VS2015界面主菜单上，选择project->C02_Cpp_Image_LoadShow Properties->Linker->General->Additional Library Directories
-								编辑该窗口，增加“D:\opencv420x64v14\build\x64\vc14\lib”
-		6）由于opencv-4.2.0-vc14_vc15.exe是X64的库，此时工程也必须设置为X64 Debug或Release（在主界面上Solution Platform控件中设置）；
-		7）具体操作方法可参考第一章课件网页上相关视频。
-【4】自己能够编译运行这个程序后，可修改图片、参数来测试算法性能。
-
-
-2020年5月6日：增加现场车道标记功能
-	1）标记后的车道矩形框存储在myLanneRect向量中；程序启动时从MarkRect.txt文件中读取到向量中；
-	2) 点击鼠标左键，鼠标点坐标推送到向量myMousePoints中（FIFO队列，最大4点）；
-	3) 点击鼠标右键键，将myMousePoints中的四个点推送到车道矩形框向量myLanneRect中；不足4点不操作；
-	4）点击鼠标中间键，删除myMousePoints中的一个点，如果myMousePoints为空，则删除myLanneRect中的最后一个节点；
-	5）点击键盘小写"w"按键，将车道矩形框向量myLanneRect中的节点写入到文件MarkRect.txt，下次重启程序时读入。
-	6）显示Mog2前景提取结果前，计算每个车道矩形框内的亮度和，并显示到屏幕上；
-	7）显示原始彩色图片前，计算每个车道矩形框内的亮度和，并显示到屏幕上；
-	8）观察并记录每个车道矩形框内的亮度和变化，找一个恰当阈值，作为有车辆经过的门限；当矩形框内亮度和经历：小于阈值==>> 大于阈值==>> 小于阈值 表达有一个车辆经过了。
-	9) 请看一下彩色屏幕上的车流量统计数据，如何计算的，在哪里计算的，===>> 比较实际情况，进一步优化。
-
-*************************************************************************************/
-
 #include "stdafx.h"
 #include <Windows.h>
 #include <string>
